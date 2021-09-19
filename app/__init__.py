@@ -32,4 +32,4 @@ def create_app(config_name):
   # configure_uploads(app,photos)
   # mail.init_app(app)
 
-  return app
+  # return app

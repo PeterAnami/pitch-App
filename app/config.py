@@ -12,11 +12,11 @@ class Config:
 #   SIMPLEMDE_USE_CDN = True
 
   
-#   MAIL_SERVER = 'smtp.googlemail.com'
-#   MAIL_PORT = 587
-#   MAIL_USE_TLS = True
-#   MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
-#   MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+  MAIL_SERVER = 'smtp.googlemail.com'
+  MAIL_PORT = 587
+  MAIL_USE_TLS = True
+  MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+  MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
   UPLOADED_PHOTOS_DEST = 'app/static/photos'
 

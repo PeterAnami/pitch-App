@@ -9,19 +9,19 @@ from werkzeug.security import generate_password_hash,check_password_hash
 # def load_user(user_id):
 #   return User.query.get(user_id)
 
-class User(db.Model):
-  #should be included in the above class UserMixin,
+class User(db.Model, UserMixin):
+  #should be included in the above class 
   __tablename__ = 'users'
   id = db.Column(db.Integer, primary_key = True)
   username = db.Column(db.String(255),unique = True,nullable = False)
   email  = db.Column(db.String(255),unique = True,nullable = False)
   secure_password = db.Column(db.String(255),nullable = False)
-#   bio = db.Column(db.String(255))
-#   profile_pic_path = db.Column(db.String())
-#   pitches = db.relationship('Pitch', backref='user', lazy='dynamic')
-#   comment = db.relationship('Comment', backref='user', lazy='dynamic')
-#   upvote = db.relationship('Upvote',backref='user',lazy='dynamic')
-#   downvote = db.relationship('Downvote',backref='user',lazy='dynamic')
+  bio = db.Column(db.String(255))
+  profile_pic_path = db.Column(db.String())
+  pitches = db.relationship('Pitch', backref='user', lazy='dynamic')
+  comment = db.relationship('Comment', backref='user', lazy='dynamic')
+  upvote = db.relationship('Upvote',backref='user',lazy='dynamic')
+  downvote = db.relationship('Downvote',backref='user',lazy='dynamic')
 
   @property
   def set_password(self):

@@ -8,8 +8,8 @@ class Config:
   SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:12345@localhost/peter'
 
  
-#   SIMPLEMDE_JS_IIFE = True
-#   SIMPLEMDE_USE_CDN = True
+  SIMPLEMDE_JS_IIFE = True
+  SIMPLEMDE_USE_CDN = True
 
   
   MAIL_SERVER = 'smtp.googlemail.com'
@@ -20,20 +20,20 @@ class Config:
 
   UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
-# class ProdConfig(Config):
-#   SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL","")
-#   if SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
-#     SQLALCHEMY_DATABASE_URI =SQLALCHEMY_DATABASE_URI.replace("postgres://","postgresql://",1)
+class ProdConfig(Config):
+  SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL","")
+  if SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
+    SQLALCHEMY_DATABASE_URI =SQLALCHEMY_DATABASE_URI.replace("postgres://","postgresql://",1)
 
-# class DevConfig(Config):
-#   SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:peter@localhost/pitches'
-#   DEBUG = True
+class DevConfig(Config):
+  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:peter12345@localhost/peter'
+  DEBUG = True
 
-# class TestConfig(Config):
-#   SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:nick101010@localhost/pitch_test'
+class TestConfig(Config):
+  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:peter12345@localhost/pitch_test'
 
-# config_options = {
-#   'production':ProdConfig,
-#   'development':DevConfig,
-#   'test':TestConfig
-# }
+config_options = {
+  'production':ProdConfig,
+  'development':DevConfig,
+  'test':TestConfig
+}

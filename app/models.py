@@ -9,7 +9,8 @@ from . import db
 # def load_user(user_id):
 #   return User.query.get(user_id)
 
-class User(UserMixin,db.Model):
+class User(db.Model):
+  #should be included in the above class UserMixin,
   __tablename__ = 'users'
   id = db.Column(db.Integer, primary_key = True)
   username = db.Column(db.String(255),unique = True,nullable = False)

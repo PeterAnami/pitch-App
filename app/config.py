@@ -5,7 +5,7 @@
 class Config:
   SQLALCHEMY_TRACK_MODIFICATIONS=True
   SECRET_KEY = os.environ.get('SECRET_KEY')
-  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:peter:12345@localhost/pitches'
+  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:12345@localhost/peter'
 
  
 #   SIMPLEMDE_JS_IIFE = True

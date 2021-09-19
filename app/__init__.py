@@ -1,5 +1,5 @@
-# from flask import Flask
-# from config import config_options
+from flask import Flask
+from config import config_options
 from flask_mail import Mail
 from flask_login import LoginManager, login_manager
 from flask_bootstrap import Bootstrap
@@ -21,14 +21,14 @@ def create_app(config_name):
   from .main import main as main_blueprint
 
  
-  # app.register_blueprint(authentication_blueprint)
-  # app.register_blueprint(main_blueprint)
+  app.register_blueprint(authentication_blueprint)
+  app.register_blueprint(main_blueprint)
 
   
-  # login_manager.init_app(app)
+  login_manager.init_app(app)
   db.init_app(app)
   bootstrap.init_app(app)
   configure_uploads(app,photos)
-  # mail.init_app(app)
+  mail.init_app(app)
 
-  # return app
+  return app

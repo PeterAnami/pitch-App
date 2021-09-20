@@ -1,11 +1,11 @@
-# import os
-# from dotenv import load_dotenv
-# load_dotenv()
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 class Config:
   SQLALCHEMY_TRACK_MODIFICATIONS=True
   SECRET_KEY = os.environ.get('SECRET_KEY')
-  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:12345@localhost/peter'
+  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/peter'
 
  
   SIMPLEMDE_JS_IIFE = True

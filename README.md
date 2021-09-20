@@ -34,6 +34,8 @@ Or you can access the web application directly
 * Python 3
 * Flask Bootstrap
 * HTML
+* CSS
+* Shell
 *****
 ### License
 This project is under MIT licence 

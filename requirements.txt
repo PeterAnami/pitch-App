@@ -16,7 +16,7 @@ Flask-Migrate==2.5.2
 Flask-Script==2.0.6
 Flask-SimpleMDE==0.3.0
 Flask-SQLAlchemy==2.5.1
-Flask-Uploads==0.2.1
+Flask-Reuploaded==1.1.0
 Flask-WTF==0.15.0
 gunicorn==19.10.0
 idna==2.6
